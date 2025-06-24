@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Configuration - User Guide | MemoHub</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f7;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007AFF;
+            text-align: center;
+            border-bottom: 3px solid #007AFF;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34C759;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid #34C759;
+        }
+        h3 {
+            color: #FF9500;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .feature-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007AFF;
+        }
+        .button-info {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #2196f3;
+        }
+        .warning {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+        .success {
+            background-color: #d4edda;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+            margin: 15px 0;
+        }
+        .info {
+            background-color: #d1ecf1;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #17a2b8;
+            margin: 15px 0;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .icon {
+            font-weight: bold;
+            color: #007AFF;
+        }
+        code {
+            background-color: #f1f3f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .component-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .component-item {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+        }
+        .step-number {
+            background-color: #007AFF;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .back-button {
+            display: inline-block;
+            background-color: #007AFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+        .back-button::before {
+            content: "← ";
+            margin-right: 5px;
+        }
+        .setting-demo {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #007AFF;
+            margin: 15px 0;
+        }
+        .setting-item {
+            background-color: #ffe6e6;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 5px 0;
+            border-left: 3px solid #ff6b6b;
+        }
+        .limit-section {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .version-info {
+            background-color: #f3e5f5;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 8px 0;
+            border-left: 3px solid #9c27b0;
+        }
+        .management-section {
+            background-color: #fff5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #e53e3e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">Back to Main User Guide</a>
+        
+        <h1>⚙️ Settings - Configuration and Management</h1>
+        
+        <div class="feature-section">
+            <h2>🎯 Settings Overview</h2>
+            <p>The Settings screen allows you to configure various app preferences, manage content limits, view app information, and access data management functions. Customize MemoHub to suit your usage patterns and needs.</p>
+        </div>
+
+        <h2>📱 Settings Screen Layout</h2>
+        
+        <div class="info">
+            <h3>Setting Categories</h3>
+            <ul>
+                <li><strong>Content Limits</strong> - Set maximum numbers for various media types</li>
+                <li><strong>Data Management</strong> - View and manage all memos and alarms</li>
+                <li><strong>App Information</strong> - Version details and support information</li>
+            </ul>
+        </div>
+
+        <h2>📊 Content Limit Settings</h2>
+        
+        <div class="component-list">
+            <div class="component-item">
+                <p><span class="icon">📷</span></p>
+                <strong>Photo Limit</strong>
+                <p>Set maximum photos per memo</p>
+            </div>
+            <div class="component-item">
+                <p><span class="icon">🎥</span></p>
+                <strong>Video Limit</strong>
+                <p>Set maximum videos per memo</p>
+            </div>
+            <div class="component-item">
+                <p><span class="icon">🎤</span></p>
+                <strong>Audio Limit</strong>
+                <p>Set maximum audio recordings per memo</p>
+            </div>
+            <div class="component-item">
+                <p><span class="icon">📍</span></p>
+                <strong>Location Limit</strong>
+                <p>Set maximum locations per memo</p>
+            </div>
+        </div>
+
+        <div class="limit-section">
+            <h3>Photo Count Limit Setting</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Configuration Process</strong></p>
+                <ul>
+                    <li>Tap "Photo Count Limit" in Settings</li>
+                    <li>Input desired maximum number (numeric value)</li>
+                    <li>Setting applies to all new memos</li>
+                    <li>Prevents adding photos beyond the set limit</li>
+                </ul>
+            </div>
+            
+            <div class="success">
+                <p><span class="icon">📷</span> <strong>Photo Limit Benefits</strong></p>
+                <ul>
+                    <li><strong>Storage Management</strong> - Control device storage usage</li>
+                    <li><strong>Performance</strong> - Maintain app responsiveness</li>
+                    <li><strong>Organization</strong> - Encourage focused memo content</li>
+                    <li><strong>User Control</strong> - Customizable to individual needs</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="limit-section">
+            <h3>Video Count Limit Setting</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Configuration Process</strong></p>
+                <ul>
+                    <li>Tap "Video Count Limit" in Settings</li>
+                    <li>Input desired maximum number (numeric value)</li>
+                    <li>Setting applies to all new memos</li>
+                    <li>Prevents adding videos beyond the set limit</li>
+                </ul>
+            </div>
+            
+            <div class="warning">
+                <p><span class="icon">🎥</span> <strong>Video Storage Considerations</strong></p>
+                <ul>
+                    <li><strong>File Size</strong> - Videos consume significantly more storage than photos</li>
+                    <li><strong>Performance Impact</strong> - Multiple videos may affect app performance</li>
+                    <li><strong>Playback Quality</strong> - Higher limits may impact video playback</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="limit-section">
+            <h3>Audio Count Limit Setting</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Configuration Process</strong></p>
+                <ul>
+                    <li>Tap "Audio Count Limit" in Settings</li>
+                    <li>Input desired maximum number (numeric value)</li>
+                    <li>Setting applies to all new memos</li>
+                    <li>Prevents recording audio beyond the set limit</li>
+                </ul>
+            </div>
+            
+            <div class="info">
+                <p><span class="icon">🎤</span> <strong>Audio Recording Features</strong></p>
+                <ul>
+                    <li><strong>Quality Control</strong> - Manage audio file storage</li>
+                    <li><strong>Recording Management</strong> - Organize audio content effectively</li>
+                    <li><strong>Playback Performance</strong> - Ensure smooth audio playback</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="limit-section">
+            <h3>Location Count Limit Setting</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Configuration Process</strong></p>
+                <ul>
+                    <li>Tap "Location Count Limit" in Settings</li>
+                    <li>Input desired maximum number (numeric value)</li>
+                    <li>Setting applies to all new memos</li>
+                    <li>Prevents adding locations beyond the set limit</li>
+                </ul>
+            </div>
+            
+            <div class="success">
+                <p><span class="icon">📍</span> <strong>Location Benefits</strong></p>
+                <ul>
+                    <li><strong>Context Preservation</strong> - Maintain location relevance</li>
+                    <li><strong>Privacy Control</strong> - Limit location data collection</li>
+                    <li><strong>Data Efficiency</strong> - Manage location-based storage</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>🗃️ Data Management Functions</h2>
+        
+        <div class="management-section">
+            <h3>All Memo List View</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Memo Overview</strong></p>
+                <ul>
+                    <li>Tap "All Memo List" in Settings</li>
+                    <li>View comprehensive list of all created memos</li>
+                    <li>Quick access to memo details and statistics</li>
+                    <li>Useful for data management and overview</li>
+                </ul>
+            </div>
+            
+            <div class="info">
+                <p><span class="icon">📝</span> <strong>Management Features</strong></p>
+                <ul>
+                    <li><strong>Complete Overview</strong> - See all memos in one place</li>
+                    <li><strong>Quick Navigation</strong> - Direct access to any memo</li>
+                    <li><strong>Data Insights</strong> - Understand your memo creation patterns</li>
+                    <li><strong>Storage Analysis</strong> - Review total content and storage usage</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="management-section">
+            <h3>All Alarm List View</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Alarm Overview</strong></p>
+                <ul>
+                    <li>Tap "All Alarm List" in Settings</li>
+                    <li>View comprehensive list of all set alarms</li>
+                    <li>Check alarm status and scheduled times</li>
+                    <li>Manage notification settings centrally</li>
+                </ul>
+            </div>
+            
+            <div class="warning">
+                <p><span class="icon">⏰</span> <strong>Alarm Management</strong></p>
+                <ul>
+                    <li><strong>Active Alarms</strong> - View all currently scheduled notifications</li>
+                    <li><strong>Time Management</strong> - Check upcoming alarm times</li>
+                    <li><strong>Memo Association</strong> - See which memos have alarms set</li>
+                    <li><strong>System Integration</strong> - Alarms work with device notification system</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>ℹ️ App Information</h2>
+        
+        <div class="version-info">
+            <h3>App Version Information</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Version Details</strong></p>
+                <ul>
+                    <li>Tap "App Version" in Settings</li>
+                    <li>View current app version number</li>
+                    <li>Check for update information</li>
+                    <li>Access build and release details</li>
+                </ul>
+            </div>
+            
+            <div class="success">
+                <p><span class="icon">📱</span> <strong>Version Benefits</strong></p>
+                <ul>
+                    <li><strong>Update Tracking</strong> - Know when you have the latest version</li>
+                    <li><strong>Support Reference</strong> - Useful when contacting support</li>
+                    <li><strong>Feature Awareness</strong> - Understand available features</li>
+                    <li><strong>Compatibility</strong> - Ensure device compatibility</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>🔧 Input Setting Details</h2>
+        
+        <div class="setting-demo">
+            <h3>Numeric Input Process</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Setting Input Method</strong></p>
+                <ul>
+                    <li>Tap the desired limit setting</li>
+                    <li>Numeric keypad appears</li>
+                    <li>Input desired maximum value</li>
+                    <li>Tap "Save" or "Done" to confirm</li>
+                </ul>
+            </div>
+            
+            <div class="button-info">
+                <p><span class="step-number">2</span><strong>Validation and Storage</strong></p>
+                <ul>
+                    <li>App validates input for reasonable ranges</li>
+                    <li>Settings are immediately saved to Core Data</li>
+                    <li>Changes take effect for new memos</li>
+                    <li>Existing memos are not affected</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>📋 Default Limit Values</h2>
+        
+        <div class="info">
+            <h3>Recommended Settings</h3>
+            <div class="component-list">
+                <div class="component-item">
+                    <span class="icon">📷</span>
+                    <strong>Photos</strong>
+                    <p>5-10 per memo</p>
+                    <small>Balance storage and visual content</small>
+                </div>
+                <div class="component-item">
+                    <span class="icon">🎥</span>
+                    <strong>Videos</strong>
+                    <p>2-3 per memo</p>
+                    <small>Consider storage impact</small>
+                </div>
+                <div class="component-item">
+                    <span class="icon">🎤</span>
+                    <strong>Audio</strong>
+                    <p>3-5 per memo</p>
+                    <small>Organize audio content</small>
+                </div>
+                <div class="component-item">
+                    <span class="icon">📍</span>
+                    <strong>Locations</strong>
+                    <p>1-2 per memo</p>
+                    <small>Maintain relevance</small>
+                </div>
+            </div>
+        </div>
+
+        <h2>💾 Setting Persistence</h2>
+        
+        <div class="feature-section">
+            <h3>Automatic Saving</h3>
+            <div class="success">
+                <p><span class="icon">💾</span> <strong>Data Persistence</strong></p>
+                <ul>
+                    <li><strong>Immediate Save</strong> - Settings are saved immediately upon change</li>
+                    <li><strong>Core Data Storage</strong> - Settings stored in local database</li>
+                    <li><strong>App Restart</strong> - Settings persist across app restarts</li>
+                    <li><strong>No Manual Save</strong> - No need to manually save settings</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>🎯 Performance Impact</h2>
+        
+        <div class="warning">
+            <h3>Limit Considerations</h3>
+            <ul>
+                <li><strong>Storage Space</strong> - Higher limits increase storage requirements</li>
+                <li><strong>Memory Usage</strong> - More media items require more RAM</li>
+                <li><strong>Loading Time</strong> - Many media items may slow memo loading</li>
+                <li><strong>Device Performance</strong> - Consider your device's capabilities</li>
+            </ul>
+        </div>
+
+        <div class="success">
+            <h3>Optimization Tips</h3>
+            <ul>
+                <li><strong>Balanced Limits</strong> - Set reasonable limits based on usage patterns</li>
+                <li><strong>Content Quality</strong> - Focus on relevant, high-quality media</li>
+                <li><strong>Regular Review</strong> - Periodically review and adjust limits</li>
+                <li><strong>Storage Monitoring</strong> - Keep an eye on device storage usage</li>
+            </ul>
+        </div>
+
+        <h2>🔄 Setting Changes and Effects</h2>
+        
+        <div class="setting-demo">
+            <h3>How Changes Apply</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Immediate Effect</strong></p>
+                <ul>
+                    <li>Setting changes apply immediately</li>
+                    <li>New memos will use updated limits</li>
+                    <li>Current memo editing sessions are not affected</li>
+                    <li>Existing memos keep their current content</li>
+                </ul>
+            </div>
+            
+            <div class="info">
+                <p><span class="step-number">2</span><strong>Retroactive Considerations</strong></p>
+                <ul>
+                    <li><strong>Existing Content</strong> - Not automatically modified</li>
+                    <li><strong>Future Additions</strong> - Subject to new limits</li>
+                    <li><strong>Editing Existing Memos</strong> - New limits apply to additional content</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>🗂️ Data Management Best Practices</h2>
+        
+        <div class="feature-section">
+            <h3>Efficient Settings Management</h3>
+            <div class="success">
+                <p><span class="icon">⚙️</span> <strong>Management Strategies</strong></p>
+                <ul>
+                    <li><strong>Regular Review</strong> - Periodically check and adjust settings</li>
+                    <li><strong>Usage-Based Limits</strong> - Set limits based on actual usage patterns</li>
+                    <li><strong>Storage Awareness</strong> - Monitor device storage and adjust accordingly</li>
+                    <li><strong>Feature Utilization</strong> - Use data management views to understand content</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>💡 Tips for Optimal Configuration</h2>
+        
+        <div class="success">
+            <h3>Configuration Best Practices</h3>
+            <ul>
+                <li><strong>Start Conservative</strong> - Begin with lower limits and increase as needed</li>
+                <li><strong>Monitor Performance</strong> - Watch for any app slowdowns with higher limits</li>
+                <li><strong>Content Strategy</strong> - Consider what types of content you use most</li>
+                <li><strong>Device Capabilities</strong> - Factor in your device's storage and performance</li>
+                <li><strong>Usage Patterns</strong> - Adjust limits based on how you create memos</li>
+            </ul>
+        </div>
+
+        <h2>⚠️ Important Considerations</h2>
+        
+        <div class="warning">
+            <h3>Setting Limitations and Warnings</h3>
+            <ul>
+                <li><strong>No Backup Recovery</strong> - Settings changes cannot be undone automatically</li>
+                <li><strong>Content Limits</strong> - Overly restrictive limits may hinder memo creation</li>
+                <li><strong>Storage Planning</strong> - Consider long-term storage needs</li>
+                <li><strong>Device Compatibility</strong> - Some features may vary by device</li>
+            </ul>
+        </div>
+
+        <h2>🔗 Related Functions</h2>
+        
+        <div class="info">
+            <h3>Settings Integration</h3>
+            <ul>
+                <li><strong>Memo Creation</strong> - Limits apply during new memo creation</li>
+                <li><strong>Memo Editing</strong> - Limits affect additional content in existing memos</li>
+                <li><strong>Data Views</strong> - Management screens provide content overview</li>
+                <li><strong>App Performance</strong> - Settings directly impact app responsiveness</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

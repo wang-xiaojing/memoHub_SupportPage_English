@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopPage User Guide - MemoHub</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f7;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007AFF;
+            text-align: center;
+            border-bottom: 3px solid #007AFF;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34C759;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid #34C759;
+        }
+        h3 {
+            color: #FF9500;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .feature-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007AFF;
+        }
+        .button-info {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #2196f3;
+        }
+        .warning {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+        .success {
+            background-color: #d4edda;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+            margin: 15px 0;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .icon {
+            font-weight: bold;
+            color: #007AFF;
+        }
+        code {
+            background-color: #f1f3f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .component-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .component-item {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 MemoHub - User Guide</h1>
+        
+        <div class="feature-section">
+            <h2>🏠 Main Screen Overview</h2>
+            <p>The TopPage is the main screen of the MemoHub app. You can access all features such as creating, editing, viewing, and searching memos.</p>
+        </div>
+
+        <h2>🔧 Navigation Bar</h2>
+        
+        <h3>Top Left: Menu Button</h3>
+        <div class="button-info">
+            <p><span class="icon">≡</span> <strong>Menu Button</strong></p>
+            <ul>
+                <li>Tap to open the side menu</li>
+                <li>Select memo components (features)</li>
+                <li>You can also open the menu by swiping right</li>
+            </ul>
+        </div>
+
+        <h3>Top Right: Search Button</h3>
+        <div class="button-info">
+            <p><span class="icon">🔍</span> <strong>Search Button</strong></p>
+            <ul>
+                <li>Opens the memo search screen</li>
+                <li>Search by title and content</li>
+                <li>Filter search by tags is also available</li>
+            </ul>
+            <div class="warning">
+                <strong>⚠️ Note:</strong> If there are unsaved changes in the memo being edited, a confirmation dialog will appear.
+            </div>
+        </div>
+
+        <h2>⬇️ Bottom Toolbar</h2>
+        
+        <div class="component-list">
+            <div class="component-item">
+                <p><span class="icon">📝</span></p>
+                <strong><a href="Support_New_English.html" style="color: #007AFF; text-decoration: none;">New</a></strong>
+                <p>Create a new memo</p>
+            </div>
+            <div class="component-item">
+                <p><span class="icon">📋</span></p>
+                <strong><a href="Support_List_English.html" style="color: #007AFF; text-decoration: none;">List</a></strong>
+                <p>View memo list</p>
+            </div>
+            <div class="component-item">
+                <p><span class="icon">📅</span></p>
+                <strong><a href="Support_Calendar_English.html" style="color: #007AFF; text-decoration: none;">Calendar</a></strong>
+                <p>Calendar view</p>
+            </div>
+            <div class="component-item">
+                <p><span class="icon">⚙️</span></p>
+                <strong><a href="Support_Setting_English.html" style="color: #007AFF; text-decoration: none;">Settings</a></strong>
+                <p>Open settings screen</p>
+            </div>
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Data Protection:</strong> If there are unsaved changes in the memo being edited, a confirmation dialog will appear before navigating to another screen.
+        </div>
+
+        <h2>🎛️ Memo Components</h2>
+        
+        <div class="feature-section">
+            <h3>Basic Components (Enabled by Default)</h3>
+            <div class="component-list">
+                <div class="component-item">
+                    <span class="icon">📄</span> Text<br>
+                    <small>Text Memo</small>
+                </div>
+                <div class="component-item">
+                    <span class="icon">📅</span> Date<br>
+                    <small>Date Memo</small>
+                </div>
+                <div class="component-item">
+                    <span class="icon">⏰</span> Time<br>
+                    <small>Time Memo</small>
+                </div>
+                <div class="component-item">
+                    <span class="icon">🔔</span> Alarm<br>
+                    <small>Alarm Memo</small>
+                </div>
+                <div class="component-item">
+                    <span class="icon">📺</span> Visual Content<br>
+                    <small>Image/Video</small>
+                </div>
+                <div class="component-item">
+                    <span class="icon">🎤</span> Voice Rec.<br>
+                    <small>Voice Recording</small>
+                </div>
+                <div class="component-item">
+                    <span class="icon">🌍</span> Location<br>
+                    <small>Location Info</small>
+                </div>
+                <div class="component-item">
+                    <span class="icon">📸</span> Camera<br>
+                    <small>Camera</small>
+                </div>
+                <div class="component-item">
+                    <span class="icon">🎥</span> Video<br>
+                    <small>Video</small>
+                </div>
+            </div>
+        </div>
+
+        <h2>🔄 Screen Switching</h2>
+        
+        <div class="success">
+            <h3>Available Screens</h3>
+            <ul>
+                <li><strong>New</strong> - New memo creation screen</li>
+                <li><strong>NewSpecifiedDate</strong> - Create new memo for a specified date/time</li>
+                <li><strong>Edit</strong> - Memo editing screen</li>
+                <li><strong>List</strong> - Memo list view</li>
+                <li><strong>ListSearchMemoItems</strong> - Search results list</li>
+                <li><strong>CalendarYear</strong> - Yearly calendar view</li>
+                <li><strong>CalendarMonth</strong> - Monthly calendar view</li>
+                <li><strong>Settings</strong> - Settings screen</li>
+            </ul>
+        </div>
+
+        <h2>📲 Notification Feature</h2>
+        
+        <div class="feature-section">
+            <h3>Alarm & Notification Management</h3>
+            <ul>
+                <li>Automatically request notification permission on app launch</li>
+                <li>Update notification list every 0.5 seconds</li>
+                <li>Automatically delete expired notifications</li>
+                <li>Support for calendar-based notifications</li>
+            </ul>
+        </div>
+
+        <h2>💾 Data Management</h2>
+        
+        <div class="feature-section">
+            <h3>Automatic Data Sync</h3>
+            <ul>
+                <li>Automatically load memo items from Core Data</li>
+                <li>Automatic synchronization of tag information</li>
+                <li>Save and restore component settings</li>
+                <li>Conversion processing of complex data types (voice, image, location information)</li>
+            </ul>
+        </div>
+
+        <h2>🎨 Interface</h2>
+        
+        <div class="feature-section">
+            <h3>Usability</h3>
+            <ul>
+                <li>Background color optimized for each screen</li>
+                <li>Menu operation by swipe gesture</li>
+                <li>Function restrictions during voice recording (UI protection)</li>
+                <li>Warning system for unsaved data</li>
+                <li>Smooth screen transition with animation effects</li>
+            </ul>
+        </div>
+
+        <div class="success">
+            <h3>💡 Tips for Use</h3>
+            <ul>
+                <li>You can also open the menu by swiping right</li>
+                <li>Each component can be enabled/disabled in the settings screen</li>
+                <li>The search function can be used with multiple conditions</li>
+                <li>Other operations are restricted during voice recording, so please perform other tasks after the recording is complete</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

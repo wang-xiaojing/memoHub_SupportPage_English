@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Memo Creation Mode - User Guide | MemoHub</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f7;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007AFF;
+            text-align: center;
+            border-bottom: 3px solid #007AFF;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34C759;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid #34C759;
+        }
+        h3 {
+            color: #FF9500;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .feature-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007AFF;
+        }
+        .button-info {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #2196f3;
+        }
+        .warning {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+        .success {
+            background-color: #d4edda;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+            margin: 15px 0;
+        }
+        .info {
+            background-color: #d1ecf1;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #17a2b8;
+            margin: 15px 0;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .icon {
+            font-weight: bold;
+            color: #007AFF;
+        }
+        code {
+            background-color: #f1f3f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .component-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .component-item {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+        }
+        .step-number {
+            background-color: #007AFF;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .back-button {
+            display: inline-block;
+            background-color: #007AFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+        .back-button::before {
+            content: "← ";
+            margin-right: 5px;
+        }
+        .media-demo {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #007AFF;
+            margin: 15px 0;
+        }
+        .toolbar-item {
+            background-color: #ffe6e6;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 5px 0;
+            border-left: 3px solid #ff6b6b;
+        }
+        .input-section {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .media-type {
+            background-color: #f3e5f5;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 8px 0;
+            border-left: 3px solid #9c27b0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">Back to Main User Guide</a>
+        
+        <h1>✏️ New - Memo Creation Mode</h1>
+        
+        <div class="feature-section">
+            <h2>🎯 New Mode Overview</h2>
+            <p>New mode is the screen for creating new memos. You can input various types of content including text, images, videos, audio recordings, location information, and tags to create rich memos.</p>
+        </div>
+
+        <h2>📱 Screen Layout</h2>
+        
+        <div class="info">
+            <h3>Header Area</h3>
+            <ul>
+                <li><strong>Cancel Button</strong> - Cancel memo creation and return to previous screen</li>
+                <li><strong>Save Button</strong> - Save memo and return to previous screen</li>
+                <li><strong>Date Display</strong> - Current date and time</li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h3>Main Input Area</h3>
+            <ul>
+                <li><strong>Text Editor</strong> - Input memo title and content</li>
+                <li><strong>Media Display</strong> - Added images and videos</li>
+                <li><strong>Audio List</strong> - Recorded audio files</li>
+                <li><strong>Tag Display</strong> - Assigned tags</li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h3>Toolbar</h3>
+            <ul>
+                <li><strong>Media Addition Buttons</strong> - Add photos, videos, audio</li>
+                <li><strong>Location Button</strong> - Add current location</li>
+                <li><strong>Tag Button</strong> - Add and manage tags</li>
+            </ul>
+        </div>
+
+        <h2>💾 Save and Cancel Operations</h2>
+        
+        <div class="toolbar-item">
+            <h3>Save Button</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Save Process</strong></p>
+                <ul>
+                    <li>Tap the "Save" button in the top right corner</li>
+                    <li>Memo data is saved to Core Data</li>
+                    <li>Automatically returns to the previous screen</li>
+                    <li>New memo appears in the list view</li>
+                </ul>
+            </div>
+            
+            <div class="success">
+                <p><span class="icon">💾</span> <strong>Auto-Save Function</strong></p>
+                <ul>
+                    <li>All input content is automatically saved when Save is tapped</li>
+                    <li>Text, media, location, tags are all preserved</li>
+                    <li>Creation date and time are automatically recorded</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="toolbar-item">
+            <h3>Cancel Button</h3>
+            <div class="warning">
+                <p><span class="step-number">1</span><strong>Cancel Operation</strong></p>
+                <ul>
+                    <li>Tap the "Cancel" button in the top left corner</li>
+                    <li>All input content will be discarded</li>
+                    <li>No data is saved to Core Data</li>
+                    <li>Returns to the previous screen</li>
+                </ul>
+            </div>
+            
+            <div class="warning">
+                <p><span class="icon">⚠️</span> <strong>Data Loss Warning</strong></p>
+                <ul>
+                    <li><strong>No Recovery</strong> - Cancelled content cannot be recovered</li>
+                    <li><strong>No Confirmation</strong> - No confirmation dialog is shown</li>
+                    <li><strong>Immediate Effect</strong> - Cancellation occurs immediately</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>📝 Text Input Function</h2>
+        
+        <div class="input-section">
+            <h3>Text Editor Features</h3>
+            <div class="button-info">
+                <p><span class="icon">📝</span> <strong>Multi-line Text Input</strong></p>
+                <ul>
+                    <li>Support for long text input</li>
+                    <li>Free text format without character limits</li>
+                    <li>First line automatically becomes the memo title</li>
+                    <li>Subsequent lines become the memo content</li>
+                </ul>
+            </div>
+            
+            <div class="success">
+                <p><span class="step-number">1</span><strong>Automatic Title Assignment</strong></p>
+                <ul>
+                    <li>First line of text becomes the memo title</li>
+                    <li>Displayed in list view as memo identification</li>
+                    <li>If only one line exists, it serves as both title and content</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>📸 Media Addition Functions</h2>
+        
+        <div class="component-list">
+            <div class="component-item">
+                <p><span class="icon">📷</span></p>
+                <strong>Photo Addition</strong>
+                <p>Add photos from camera or gallery</p>
+            </div>
+            <div class="component-item">
+                <p><span class="icon">🎥</span></p>
+                <strong>Video Addition</strong>
+                <p>Add videos from camera or gallery</p>
+            </div>
+            <div class="component-item">
+                <p><span class="icon">🎤</span></p>
+                <strong>Audio Recording</strong>
+                <p>Record and add audio notes</p>
+            </div>
+        </div>
+
+        <div class="media-type">
+            <h3>Photo Addition Function</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Photo Source Selection</strong></p>
+                <ul>
+                    <li>Tap the photo button in the toolbar</li>
+                    <li>Choose from "Camera" or "Photo Library"</li>
+                    <li>Camera: Take a new photo</li>
+                    <li>Photo Library: Select from existing photos</li>
+                </ul>
+            </div>
+            
+            <div class="button-info">
+                <p><span class="step-number">2</span><strong>Photo Management</strong></p>
+                <ul>
+                    <li>Added photos are displayed in the memo</li>
+                    <li>Multiple photos can be added</li>
+                    <li>Photos are displayed in horizontal scroll view</li>
+                    <li>Tap photos to view in full screen</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="media-type">
+            <h3>Video Addition Function</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Video Source Selection</strong></p>
+                <ul>
+                    <li>Tap the video button in the toolbar</li>
+                    <li>Choose from "Camera" or "Video Library"</li>
+                    <li>Camera: Record a new video</li>
+                    <li>Video Library: Select from existing videos</li>
+                </ul>
+            </div>
+            
+            <div class="button-info">
+                <p><span class="step-number">2</span><strong>Video Playback</strong></p>
+                <ul>
+                    <li>Added videos are displayed with thumbnail</li>
+                    <li>Tap to play video</li>
+                    <li>Built-in video player controls</li>
+                    <li>Multiple videos can be added</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="media-type">
+            <h3>Audio Recording Function</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Recording Process</strong></p>
+                <ul>
+                    <li>Tap the microphone button in the toolbar</li>
+                    <li>Recording starts immediately</li>
+                    <li>Real-time waveform display during recording</li>
+                    <li>Tap stop button to finish recording</li>
+                </ul>
+            </div>
+            
+            <div class="button-info">
+                <p><span class="step-number">2</span><strong>Audio Management</strong></p>
+                <ul>
+                    <li>Recorded audio is displayed with waveform</li>
+                    <li>Play/pause controls available</li>
+                    <li>Multiple audio recordings can be added</li>
+                    <li>Audio duration is displayed</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>📍 Location Addition Function</h2>
+        
+        <div class="media-demo">
+            <h3>Location Information Addition</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Current Location Acquisition</strong></p>
+                <ul>
+                    <li>Tap the location button in the toolbar</li>
+                    <li>GPS location is automatically acquired</li>
+                    <li>Address information is displayed</li>
+                    <li>Map view shows the location</li>
+                </ul>
+            </div>
+            
+            <div class="success">
+                <p><span class="icon">📍</span> <strong>Location Features</strong></p>
+                <ul>
+                    <li><strong>Automatic Address Resolution</strong> - Address is automatically obtained from GPS coordinates</li>
+                    <li><strong>Map Display</strong> - Location is shown on an interactive map</li>
+                    <li><strong>Privacy Consideration</strong> - Location access requires user permission</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>🏷️ Tag Addition Function</h2>
+        
+        <div class="media-demo">
+            <h3>Tag Management</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Tag Creation and Assignment</strong></p>
+                <ul>
+                    <li>Tap the tag button in the toolbar</li>
+                    <li>Create new tags or select from existing ones</li>
+                    <li>Multiple tags can be assigned to one memo</li>
+                    <li>Tags help with memo organization and searching</li>
+                </ul>
+            </div>
+            
+            <div class="button-info">
+                <p><span class="step-number">2</span><strong>Tag Display</strong></p>
+                <ul>
+                    <li>Assigned tags are displayed in the memo</li>
+                    <li>Tags appear as colored labels</li>
+                    <li>Easy visual identification of memo categories</li>
+                    <li>Tags can be removed if needed</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>⏰ Date and Time Information</h2>
+        
+        <div class="feature-section">
+            <h3>Automatic Date Recording</h3>
+            <div class="info">
+                <p><span class="icon">📅</span> <strong>Creation Date Display</strong></p>
+                <ul>
+                    <li>Current date and time are displayed at the top</li>
+                    <li>Date is automatically recorded when memo is saved</li>
+                    <li>Cannot be manually changed in New mode</li>
+                    <li>Provides temporal context for the memo</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>🔄 Media Preview Functions</h2>
+        
+        <div class="feature-section">
+            <h3>Real-time Preview</h3>
+            <div class="component-list">
+                <div class="component-item">
+                    <span class="icon">🖼️</span>
+                    <strong>Image Preview</strong>
+                    <p>Thumbnail display with full-screen view</p>
+                </div>
+                <div class="component-item">
+                    <span class="icon">🎬</span>
+                    <strong>Video Preview</strong>
+                    <p>Thumbnail with playback controls</p>
+                </div>
+                <div class="component-item">
+                    <span class="icon">🔊</span>
+                    <strong>Audio Preview</strong>
+                    <p>Waveform display with playback</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>📊 Content Limits and Performance</h2>
+        
+        <div class="warning">
+            <h3>Content Limitations</h3>
+            <ul>
+                <li><strong>Media File Limits</strong> - Check app settings for maximum file counts</li>
+                <li><strong>Storage Space</strong> - Large media files consume device storage</li>
+                <li><strong>Performance Impact</strong> - Many media files may affect app performance</li>
+                <li><strong>Device Capabilities</strong> - Features depend on device camera and microphone availability</li>
+            </ul>
+        </div>
+
+        <h2>💡 Tips for Efficient Memo Creation</h2>
+        
+        <div class="success">
+            <h3>Best Practices</h3>
+            <ul>
+                <li><strong>Descriptive Titles</strong> - Write clear first lines that serve as good titles</li>
+                <li><strong>Organized Content</strong> - Use tags to categorize memos for easy searching</li>
+                <li><strong>Media Quality</strong> - Consider file sizes when adding multiple media items</li>
+                <li><strong>Location Privacy</strong> - Be mindful of location data when sharing memos</li>
+                <li><strong>Regular Saving</strong> - Save frequently to avoid losing work</li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h3>Workflow Suggestions</h3>
+            <ol>
+                <li><strong>Start with Text</strong> - Begin with a clear title and description</li>
+                <li><strong>Add Media</strong> - Include relevant photos, videos, or audio</li>
+                <li><strong>Set Location</strong> - Add location if relevant to the memo content</li>
+                <li><strong>Apply Tags</strong> - Categorize with appropriate tags</li>
+                <li><strong>Review and Save</strong> - Check content before saving</li>
+            </ol>
+        </div>
+
+        <h2>⚠️ Important Considerations</h2>
+        
+        <div class="warning">
+            <h3>Data Management</h3>
+            <ul>
+                <li><strong>Cancellation Warning</strong> - Cancel button immediately discards all content</li>
+                <li><strong>No Auto-Save</strong> - Content is only saved when Save button is tapped</li>
+                <li><strong>Permission Requirements</strong> - Camera, microphone, and location access require user permission</li>
+                <li><strong>Device Storage</strong> - Media content is stored locally on the device</li>
+            </ul>
+        </div>
+
+        <h2>🔗 Integration with Other Modes</h2>
+        
+        <div class="info">
+            <h3>Navigation to New Mode</h3>
+            <ul>
+                <li><strong>From List View</strong> - Tap the + button to create new memo</li>
+                <li><strong>From Calendar View</strong> - Tap the + button or tap on a date</li>
+                <li><strong>From Search Results</strong> - Use + button while viewing search results</li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h3>After Saving</h3>
+            <ul>
+                <li><strong>List View</strong> - New memo appears in the memo list</li>
+                <li><strong>Calendar View</strong> - Memo is visible on the creation date</li>
+                <li><strong>Search Function</strong> - Memo becomes searchable by content and tags</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

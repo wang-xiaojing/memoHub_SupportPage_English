@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar View Mode - User Guide | MemoHub</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f7;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007AFF;
+            text-align: center;
+            border-bottom: 3px solid #007AFF;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34C759;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid #34C759;
+        }
+        h3 {
+            color: #FF9500;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .feature-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007AFF;
+        }
+        .button-info {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #2196f3;
+        }
+        .warning {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+        .success {
+            background-color: #d4edda;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+            margin: 15px 0;
+        }
+        .info {
+            background-color: #d1ecf1;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #17a2b8;
+            margin: 15px 0;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .icon {
+            font-weight: bold;
+            color: #007AFF;
+        }
+        code {
+            background-color: #f1f3f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .component-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .component-item {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+        }
+        .step-number {
+            background-color: #007AFF;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .back-button {
+            display: inline-block;
+            background-color: #007AFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+        .back-button::before {
+            content: "← ";
+            margin-right: 5px;
+        }
+        .gesture-demo {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #007AFF;
+            margin: 15px 0;
+        }
+        .calendar-legend {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #6c757d;
+        }
+        .navigation-control {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .month-grid {
+            background-color: #fff5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #ff6b6b;
+        }
+        .stats-info {
+            background-color: #f0f0f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #9c27b0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">Back to Main User Guide</a>
+        
+        <h1>📅 Calendar - Calendar View Mode</h1>
+        
+        <div class="feature-section">
+            <h2>🎯 Calendar Mode Overview</h2>
+            <p>Calendar mode visually displays memos in an annual calendar format, allowing date-based memo management. You can see at a glance which dates have memos and navigate to detailed monthly views.</p>
+        </div>
+
+        <h2>📋 Screen Layout</h2>
+        
+        <div class="info">
+            <h3>Header Area</h3>
+            <ul>
+                <li><strong>Year Display</strong> - Large display of the currently viewed year</li>
+                <li><strong>Navigation Buttons</strong> - Year navigation and Today function</li>
+                <li><strong>Statistics</strong> - Display of memo count and notification count</li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h3>Calendar Grid Area</h3>
+            <ul>
+                <li><strong>12-Month Display</strong> - Shows months in a 3×4 grid layout</li>
+                <li><strong>Mini Calendar for Each Month</strong> - Visual display of dates and memo presence</li>
+                <li><strong>Toolbar</strong> - New memo creation button</li>
+            </ul>
+        </div>
+
+        <h2>🎛️ Navigation Features</h2>
+        
+        <div class="navigation-control">
+            <h3>Year Navigation Controls</h3>
+            <div class="component-list">
+                <div class="component-item">
+                    <p><span class="icon">◀</span></p>
+                    <strong>Previous Year</strong>
+                    <p>Go to previous year</p>
+                </div>
+                <div class="component-item">
+                    <p><span class="icon">📅</span></p>
+                    <strong>Today</strong>
+                    <p>Jump to current year</p>
+                </div>
+                <div class="component-item">
+                    <p><span class="icon">▶</span></p>
+                    <strong>Next Year</strong>
+                    <p>Go to next year</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gesture-demo">
+            <h3>Swipe Gesture Controls</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Left Swipe</strong> - Move to next year</p>
+                <ul>
+                    <li>Swipe left on the calendar area</li>
+                    <li>Smooth transition animation</li>
+                    <li>Same as tapping the next year button</li>
+                </ul>
+            </div>
+            
+            <div class="button-info">
+                <p><span class="step-number">2</span><strong>Right Swipe</strong> - Move to previous year</p>
+                <ul>
+                    <li>Swipe right on the calendar area</li>
+                    <li>Intuitive year navigation</li>
+                    <li>Works throughout the calendar grid</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>📊 Statistics Display</h2>
+        
+        <div class="stats-info">
+            <h3>Current Year Statistics</h3>
+            <div class="button-info">
+                <p><span class="icon">📝</span> <strong>Memo Count</strong></p>
+                <ul>
+                    <li>Total number of memos for the displayed year</li>
+                    <li>Real-time count updates</li>
+                    <li>Includes all memo types</li>
+                </ul>
+            </div>
+            
+            <div class="button-info">
+                <p><span class="icon">🔔</span> <strong>Notification Count</strong></p>
+                <ul>
+                    <li>Number of memos with alarms set</li>
+                    <li>Active notifications for the year</li>
+                    <li>Helps track scheduled memos</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>📅 Monthly Calendar Grid</h2>
+        
+        <div class="month-grid">
+            <h3>12-Month Display Layout</h3>
+            <div class="feature-section">
+                <h4>Grid Structure</h4>
+                <ul>
+                    <li><strong>3×4 Grid</strong> - 3 columns, 4 rows layout</li>
+                    <li><strong>Month Headers</strong> - Clear month identification</li>
+                    <li><strong>Compact View</strong> - Optimized for year overview</li>
+                    <li><strong>Touch Responsive</strong> - Easy month selection</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="month-grid">
+            <h3>Individual Month Mini Calendar Features</h3>
+            <div class="component-list">
+                <div class="component-item">
+                    <p><span class="icon">📅</span></p>
+                    <strong>Date Display</strong>
+                    <p>All dates for the month</p>
+                </div>
+                <div class="component-item">
+                    <p><span class="icon">🔵</span></p>
+                    <strong>Memo Indicators</strong>
+                    <p>Visual markers for memo dates</p>
+                </div>
+                <div class="component-item">
+                    <p><span class="icon">👆</span></p>
+                    <strong>Month Selection</strong>
+                    <p>Tap to view detailed month</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>🎨 Calendar Display Details</h2>
+        
+        <div class="calendar-legend">
+            <h3>Date Color Coding</h3>
+            <div class="button-info">
+                <p><span class="icon">🔵</span> <strong>Dates with Memos</strong></p>
+                <ul>
+                    <li>Blue indicators for dates containing memos</li>
+                    <li>Clear visual distinction</li>
+                    <li>Quick identification of active dates</li>
+                </ul>
+            </div>
+            
+            <div class="button-info">
+                <p><span class="icon">⚪</span> <strong>Dates without Memos</strong></p>
+                <ul>
+                    <li>Standard date display</li>
+                    <li>No special indicators</li>
+                    <li>Clean, uncluttered appearance</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>👆 How to Use</h2>
+        
+        <div class="feature-section">
+            <h3>Basic Operations</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Month Selection</strong></p>
+                <ul>
+                    <li>Tap any month in the grid</li>
+                    <li>Navigate to detailed monthly view</li>
+                    <li>See individual memo details</li>
+                </ul>
+            </div>
+            
+            <div class="button-info">
+                <p><span class="step-number">2</span><strong>Year Navigation</strong></p>
+                <ul>
+                    <li>Use navigation buttons or swipe gestures</li>
+                    <li>Browse through different years</li>
+                    <li>Quick access to Today button</li>
+                </ul>
+            </div>
+            
+            <div class="button-info">
+                <p><span class="step-number">3</span><strong>Statistics Review</strong></p>
+                <ul>
+                    <li>Check yearly memo statistics</li>
+                    <li>Monitor notification counts</li>
+                    <li>Track memo creation patterns</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>🔧 Toolbar Features</h2>
+        
+        <div class="navigation-control">
+            <h3>New Memo Creation</h3>
+            <div class="button-info">
+                <p><span class="step-number">+</span><strong>Add New Memo</strong></p>
+                <ul>
+                    <li>Create new memo from calendar view</li>
+                    <li>Automatically set current date</li>
+                    <li>Quick access to memo creation</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>🔄 Auto-Update Features</h2>
+        
+        <div class="feature-section">
+            <h3>Real-Time Data Updates</h3>
+            <div class="success">
+                <p><span class="icon">⚡</span> <strong>Live Statistics</strong></p>
+                <ul>
+                    <li>Statistics update automatically</li>
+                    <li>Immediate reflection of memo changes</li>
+                    <li>No manual refresh required</li>
+                </ul>
+            </div>
+            
+            <div class="success">
+                <p><span class="icon">🔄</span> <strong>Calendar Sync</strong></p>
+                <ul>
+                    <li>Calendar view updates in real-time</li>
+                    <li>New memos appear immediately</li>
+                    <li>Deleted memos removed instantly</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>🌍 Multi-Language Support</h2>
+        
+        <div class="info">
+            <h3>Localization Features</h3>
+            <div class="button-info">
+                <p><span class="icon">🌐</span> <strong>Language Adaptation</strong></p>
+                <ul>
+                    <li>Month names in user's language</li>
+                    <li>Interface text localization</li>
+                    <li>Date format according to locale</li>
+                </ul>
+            </div>
+            
+            <div class="button-info">
+                <p><span class="icon">📱</span> <strong>System Integration</strong></p>
+                <ul>
+                    <li>Follows device language settings</li>
+                    <li>Consistent with iOS standards</li>
+                    <li>Automatic language switching</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>🎯 Efficient Usage Tips</h2>
+        
+        <div class="success">
+            <h3>💡 Usage Tips</h3>
+            <ul>
+                <li><strong>Quick Year Navigation</strong> - Use swipe gestures for faster browsing</li>
+                <li><strong>Today Button</strong> - Quickly return to current year</li>
+                <li><strong>Visual Overview</strong> - Get yearly memo distribution at a glance</li>
+                <li><strong>Monthly Focus</strong> - Tap months to drill down to details</li>
+            </ul>
+        </div>
+
+        <div class="success">
+            <h3>🔍 Visual Memo Checking</h3>
+            <ul>
+                <li><strong>Pattern Recognition</strong> - Identify busy periods visually</li>
+                <li><strong>Gap Analysis</strong> - Find months without memos</li>
+                <li><strong>Productivity Tracking</strong> - Monitor memo creation frequency</li>
+                <li><strong>Planning Aid</strong> - Use for future memo scheduling</li>
+            </ul>
+        </div>
+
+        <h2>🔗 Integration with Other Screens</h2>
+        
+        <div class="info">
+            <h3>Screen Navigation</h3>
+            <ul>
+                <li><strong>Monthly View</strong> - Tap any month for detailed view</li>
+                <li><strong>Memo Creation</strong> - Direct access to new memo screen</li>
+                <li><strong>List View</strong> - Switch to list mode for different perspective</li>
+                <li><strong>Settings</strong> - Access app configuration options</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            <h3>⚠️ Important Notes</h3>
+            <ul>
+                <li><strong>Data Loading</strong> - Large year ranges may take time to load</li>
+                <li><strong>Memory Usage</strong> - Calendar optimized for performance</li>
+                <li><strong>Touch Responsiveness</strong> - Allow time for touch registration on month selection</li>
+                <li><strong>Network Sync</strong> - Statistics may need network for cloud sync</li>
+            </ul>
+        </div>
+
+        <h2>🛠️ Technical Features</h2>
+        
+        <div class="feature-section">
+            <h3>Performance Optimization</h3>
+            <ul>
+                <li><strong>Lazy Loading</strong> - Calendar data loaded on demand</li>
+                <li><strong>Efficient Rendering</strong> - Optimized for smooth scrolling</li>
+                <li><strong>Memory Management</strong> - Smart caching of calendar data</li>
+                <li><strong>Battery Optimization</strong> - Minimal background processing</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

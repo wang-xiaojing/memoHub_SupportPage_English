@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Memo List Display Mode - User Guide | MemoHub</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f7;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007AFF;
+            text-align: center;
+            border-bottom: 3px solid #007AFF;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34C759;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid #34C759;
+        }
+        h3 {
+            color: #FF9500;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .feature-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007AFF;
+        }
+        .button-info {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #2196f3;
+        }
+        .warning {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+        .success {
+            background-color: #d4edda;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+            margin: 15px 0;
+        }
+        .info {
+            background-color: #d1ecf1;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #17a2b8;
+            margin: 15px 0;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .icon {
+            font-weight: bold;
+            color: #007AFF;
+        }
+        code {
+            background-color: #f1f3f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .component-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .component-item {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+        }
+        .step-number {
+            background-color: #007AFF;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .back-button {
+            display: inline-block;
+            background-color: #007AFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+        .back-button::before {
+            content: "← ";
+            margin-right: 5px;
+        }
+        .gesture-demo {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #007AFF;
+            margin: 15px 0;
+        }
+        .toolbar-item {
+            background-color: #ffe6e6;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 5px 0;
+            border-left: 3px solid #ff6b6b;
+        }
+        .view-mode {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">Back to Main User Guide</a>
+        
+        <h1>📋 List - Memo List Display Mode</h1>
+        
+        <div class="feature-section">
+            <h2>🎯 List Mode Overview</h2>
+            <p>List mode displays created memos in a list format and is the screen for viewing, editing, and deleting memos. It has two display modes: Standard display and Lite display, which can be switched according to your needs.</p>
+        </div>
+
+        <h2>📱 Screen Layout</h2>
+        
+        <div class="info">
+            <h3>Navigation Bar</h3>
+            <ul>
+                <li><strong>+ Button</strong> - Create a new memo</li>
+                <li><strong>Lite Button</strong> - Switch display modes</li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h3>Main List Area</h3>
+            <ul>
+                <li><strong>Memo Items</strong> - Display detailed information for each memo</li>
+                <li><strong>Swipe Actions</strong> - Edit and delete operations</li>
+                <li><strong>Tap Operations</strong> - Navigate to memo editing screen</li>
+            </ul>
+        </div>
+
+        <h2>🔧 Toolbar Functions</h2>
+        
+        <div class="component-list">
+            <div class="component-item">
+                <p><span class="icon">➕</span></p>
+                <strong>New Creation Button</strong>
+                <p>Create a new memo</p>
+            </div>
+            <div class="component-item">
+                <p><span class="icon">📝</span></p>
+                <strong>Lite Button</strong>
+                <p>Switch display modes</p>
+            </div>
+        </div>
+
+        <div class="toolbar-item">
+            <h3>New Creation Button (+ Button)</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Create new from List mode</strong></p>
+                <ul>
+                    <li>Tap the + button in the top right corner of List mode</li>
+                    <li>Navigates to New mode (memo creation screen)</li>
+                    <li>Allows you to create a new memo without specifying a date</li>
+                </ul>
+            </div>
+            
+            <div class="button-info">
+                <p><span class="step-number">2</span><strong>Create new from search results list</strong></p>
+                <ul>
+                    <li>Also available when viewing search results</li>
+                    <li>Maintains the same functionality as regular List mode</li>
+                    <li>Returns to the search screen after creation</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>👁️ Display Modes</h2>
+        
+        <div class="view-mode">
+            <h3>Standard Display Mode (Normal Mode)</h3>
+            <ul>
+                <li><strong>Memo Title</strong> - Displayed with "Title" label</li>
+                <li><strong>Memo Date</strong> - Creation date and time display</li>
+                <li><strong>Alarm Information</strong> - Icon display when set</li>
+                <li><strong>Text Content</strong> - Partial display of memo body text</li>
+            </ul>
+        </div>
+
+        <div class="view-mode">
+            <h3>Lite Display Mode (Simple Mode)</h3>
+            <ul>
+                <li><strong>Compact Display</strong> - Hide "Title" label</li>
+                <li><strong>Date Only</strong> - Display only basic information</li>
+                <li><strong>No Text Display</strong> - Memo body text is not shown</li>
+                <li><strong>Clean Appearance</strong> - Able to view more memos in list</li>
+            </ul>
+        </div>
+
+        <div class="button-info">
+            <h3>Lite Button Operation</h3>
+            <p><span class="step-number">1</span>Tap the "Lite" button in the top right</p>
+            <p><span class="step-number">2</span>Display mode will switch</p>
+            <ul>
+                <li><strong>In Standard Mode</strong> - Button displays "Lite" with blue background</li>
+                <li><strong>In Lite Mode</strong> - Button displays "Lite" with white background and blue border</li>
+                <li>Settings are automatically saved to Core Data</li>
+            </ul>
+        </div>
+
+        <h2>📝 Memo Item Display Content</h2>
+        
+        <div class="feature-section">
+            <h3>Information in Standard Display</h3>
+            <div class="button-info">
+                <p><span class="icon">🏷️</span> <strong>Title Area</strong></p>
+                <ul>
+                    <li>"Title" label is displayed</li>
+                    <li>Memo title or beginning of content is shown</li>
+                    <li>If no title is set, the first line of content is used</li>
+                </ul>
+            </div>
+            
+            <div class="button-info">
+                <p><span class="icon">📅</span> <strong>Date and Alarm Information</strong></p>
+                <ul>
+                    <li>Creation date and time</li>
+                    <li>Alarm icon if notifications are set</li>
+                    <li>Visual indicators for scheduled memos</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h3>Information in Lite Display</h3>
+            <div class="button-info">
+                <p><span class="icon">📋</span> <strong>Simplified Information</strong></p>
+                <ul>
+                    <li>No "Title" label display</li>
+                    <li>Date information only</li>
+                    <li>More compact layout for better list overview</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>🔄 Memo Operation Methods</h2>
+        
+        <div class="gesture-demo">
+            <h3>Tap Operations</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Edit Memo</strong></p>
+                <ul>
+                    <li>Tap any memo item in the list</li>
+                    <li>Navigates to edit mode for that memo</li>
+                    <li>All memo content becomes editable</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="gesture-demo">
+            <h3>Swipe Actions</h3>
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Delete Operation</strong></p>
+                <ul>
+                    <li>Swipe left on a memo item</li>
+                    <li>Red "Delete" button appears</li>
+                    <li>Tap to permanently delete the memo</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="warning">
+            <h3>Delete Operation Caution</h3>
+            <ul>
+                <li><strong>Permanent Deletion</strong> - Deleted memos cannot be recovered</li>
+                <li><strong>Confirmation Dialog</strong> - No confirmation dialog is shown</li>
+                <li><strong>Immediate Effect</strong> - Deletion occurs immediately upon tapping</li>
+            </ul>
+        </div>
+
+        <h2>🔔 Alarm Display Function</h2>
+        
+        <div class="feature-section">
+            <h3>Notification Information Display</h3>
+            <div class="info">
+                <p><span class="icon">⏰</span> <strong>Alarm Indicator</strong></p>
+                <ul>
+                    <li>Clock icon appears when alarms are set</li>
+                    <li>Visual confirmation of scheduled notifications</li>
+                    <li>Helps identify time-sensitive memos</li>
+                </ul>
+            </div>
+            
+            <div class="button-info">
+                <p><span class="step-number">1</span><strong>Alarm Status Identification</strong></p>
+                <ul>
+                    <li>Memos with alarms show a clock icon</li>
+                    <li>Regular memos display without special indicators</li>
+                    <li>Easy visual distinction between memo types</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>🎨 Display Customization</h2>
+        
+        <div class="feature-section">
+            <h3>List Display Style</h3>
+            <div class="component-list">
+                <div class="component-item">
+                    <span class="icon">📋</span>
+                    <strong>Standard Mode</strong>
+                    <p>Full information display</p>
+                </div>
+                <div class="component-item">
+                    <span class="icon">📝</span>
+                    <strong>Lite Mode</strong>
+                    <p>Simplified display</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="success">
+            <h3>Auto-Save Function</h3>
+            <ul>
+                <li><strong>Display Preference</strong> - Mode selection is automatically saved</li>
+                <li><strong>Persistent Settings</strong> - Preference is maintained between app launches</li>
+                <li><strong>Core Data Integration</strong> - Settings stored in local database</li>
+            </ul>
+        </div>
+
+        <h2>🔍 Empty State Display</h2>
+        
+        <div class="info">
+            <h3>When No Memos Exist</h3>
+            <div class="button-info">
+                <p><span class="icon">📄</span> <strong>Empty List State</strong></p>
+                <ul>
+                    <li>Empty list is displayed when no memos are created</li>
+                    <li>Use the + button to create your first memo</li>
+                    <li>List will populate as memos are added</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>🔄 Data Sync and Notifications</h2>
+        
+        <div class="feature-section">
+            <h3>Real-time Update Function</h3>
+            <div class="success">
+                <p><span class="icon">🔄</span> <strong>Automatic Updates</strong></p>
+                <ul>
+                    <li>List automatically updates when memos are added or modified</li>
+                    <li>Changes from other screens are immediately reflected</li>
+                    <li>No manual refresh required</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>💡 Useful Tips for Efficient Use</h2>
+        
+        <div class="success">
+            <h3>Efficient Operation Methods</h3>
+            <ul>
+                <li><strong>Mode Selection</strong> - Use Standard mode for detailed viewing, Lite mode for quick overview</li>
+                <li><strong>Quick Access</strong> - Tap any memo for immediate editing</li>
+                <li><strong>Visual Scanning</strong> - Use alarm icons to quickly identify scheduled memos</li>
+                <li><strong>Space Efficiency</strong> - Switch to Lite mode when you have many memos</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            <h3>⚠️ Important Notes</h3>
+            <ul>
+                <li><strong>Deletion Warning</strong> - Be careful with swipe-to-delete as there's no undo</li>
+                <li><strong>Data Safety</strong> - Regular backups are recommended for important memos</li>
+                <li><strong>Performance</strong> - Large numbers of memos may affect scrolling performance</li>
+            </ul>
+        </div>
+
+        <h2>🔗 Related Functions</h2>
+        
+        <div class="info">
+            <h3>Integration with Other Screens</h3>
+            <ul>
+                <li><strong>New Mode</strong> - Create new memos from the + button</li>
+                <li><strong>Edit Mode</strong> - Edit existing memos by tapping items</li>
+                <li><strong>Search Function</strong> - Find specific memos using the search feature</li>
+                <li><strong>Calendar View</strong> - View memos by date in Calendar mode</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
